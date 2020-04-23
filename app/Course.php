@@ -22,6 +22,11 @@ class Course extends Model
     {
         return $this->belongsToMany(Collection::class,'course_collection');
     }
+//favorite course
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_course');
+    }
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

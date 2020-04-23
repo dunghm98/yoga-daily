@@ -11,14 +11,14 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-7 col-auto">
-                        <h3 class="page-title">Lộ trình</h3>
+                        <h3 class="page-title">Level</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Lộ trình</li>
+                            <li class="breadcrumb-item active">Level</li>
                         </ul>
                     </div>
                     <div class="col-sm-5 col">
-                        <a href="{{ route('createCollection')  }}"  class="btn btn-primary float-right mt-2">Thêm lộ trình</a>
+                        <a href="{{ route('createLevel')  }}"  class="btn btn-primary float-right mt-2">Thêm Level</a>
                     </div>
                 </div>
             </div>
@@ -32,27 +32,27 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Lộ trình</th>
+                                        <th>Level</th>
                                         <th class="text-right">Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach($collections as $collection)
+                                    @foreach($levels ?? '' as $level)
                                     <tr>
-                                        <td>#CL0{{$collection->id}}</td>
+                                        <td>#LV{{$level->id}}</td>
 
                                         <td>
                                             <h2 class="table-avatar">
                                                 <a href="profile.html" class="avatar avatar-sm mr-2">
                                                     <img class="avatar-img" src="assets/img/specialities/specialities-01.png" alt="Speciality">
                                                 </a>
-                                                <a href="profile.html">{{$collection->title}}</a>
+                                                <a href="profile.html">{{$level->name}}</a>
                                             </h2>
                                         </td>
 
                                         <td class="text-right">
                                             <div class="actions">
-                                                <a class="btn btn-sm bg-success-light" href="{{route('editCollection', $collection->id)}}">
+                                                <a class="btn btn-sm bg-success-light" href="{{route('editLevel', $level->id)}}">
                                                     <i class="fe fe-pencil"></i> Edit
                                                 </a>
                                                 <a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">

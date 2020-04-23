@@ -52,7 +52,6 @@
                                             @foreach($collections as $collection)
                                                 <option {{ in_array($collection->id, $checkId) ? 'selected' : '' }} value="{{ $collection->id }}">{{ $collection->title }}</option>
                                             @endforeach
-
                                     </select>
                                 </div>
                                 <div class="form-group row">

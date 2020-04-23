@@ -8,8 +8,8 @@
             <!-- first slide -->
             <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:5;">
                 <img src="https://suckhoebabau.co/wp-content/uploads/2019/04/Yoga-c%C3%B3-nh%E1%BB%AFng-c%E1%BA%A5p-%C4%91%E1%BB%99-n%C3%A0o.jpg" class="ls-bg" alt="Slide background" width="1600" height="667">
-                <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Fitness Videos Training<br>
-                    every where for every one</h3>
+                <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Video Hướng Dẫn Fitness<br>
+                    ở mọi nơi, cho mọi người</h3>
                 <p class="ls-l slide_typo_2" style="top:62%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
                     Cardio / Strenght / Yoga
                 </p>
@@ -17,8 +17,8 @@
             <!-- second slide -->
             <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
                 <img src="https://www.hoteliermaldives.com/wp-content/uploads/Shutterstock-Maldives-Wellness-Yoga-Beach-lowres.jpg" class="ls-bg" alt="Slide background" width="1600" height="667">
-                <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">High Quality Videos<br>
-                    for every fitness level</h3>
+                <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Video chất lượng cao<br>
+                    Dành cho mọi trình độ</h3>
                 <p class="ls-l slide_typo_2" style="top:62%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
                     Cardio / Strenght / Yoga
                 </p>
@@ -26,7 +26,7 @@
             <!-- third slide -->
             <div class="ls-slide" data-ls="slidedelay:5000; transition2d:103;">
                 <img src="https://yogacuocsong.com/wp-content/uploads/2019/03/Top-nh%E1%BB%AFng-B%C3%AD-m%E1%BA%ADt-v%E1%BB%81-Yoga-m%C3%A0-b%E1%BA%A1n-n%C3%AAn-hi%E1%BB%83u-%C4%91%E1%BB%83-tr%C3%A1nh-nh%E1%BB%AFng-hi%E1%BB%83u-l%E1%BA%A7m-2.jpg" class="ls-bg" alt="Slide background" width="1600" height="667">
-                <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Improve your overall health</h3>
+                <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Nâng cao sức khoẻ</h3>
                 <p class="ls-l slide_typo_2" style="top:56%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
                     Cardio / Strenght / Yoga
                 </p>
@@ -45,19 +45,19 @@
         <div class="row">
             <div class="col-sm-4 wow fadeIn animated" data-wow-delay="0.2s">
                 <div class="box_feat" id="icon_2">
-                    <h3>Videos Workout</h3>
+                    <h3>Videos Tập Luyện</h3>
                     <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. </p>
                 </div>
             </div>
             <div class="col-sm-4 wow fadeIn animated" data-wow-delay="0.5s">
                 <div class="box_feat" id="icon_1">
-                    <h3>Expert Trainers</h3>
+                    <h3>Huấn Luyện Viên Chuyên Nghiệp</h3>
                     <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. </p>
                 </div>
             </div>
             <div class="col-sm-4 wow fadeIn animated" data-wow-delay="1s">
                 <div class="box_feat" id="icon_3">
-                    <h3>Play Everywhere</h3>
+                    <h3>Xem Ở Mọi Nơi</h3>
                     <p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. </p>
                 </div>
             </div>
@@ -114,7 +114,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h3>Available on all Devices</h3>
+                <h3>Xem được trên mọi thiết bị</h3>
                 <p class="lead">Lorem ipsum dolor sit amet, dolore deleniti appareat per no. In ius aliquam suavitate repudiare, pro an quidam inimicus, duo liber labitur repudiandae in.</p>
                 <p>
                 <p>Lorem ipsum dolor sit amet, dolore deleniti appareat per no. In ius aliquam suavitate repudiare, pro an quidam inimicus, duo liber labitur repudiandae in. Nec no tamquam delenit, sit equidem ornatus accommodare at, pro graeco debitis deterruisset no. Eam at veri oratio principes, sit ad vero ipsum affert.</p>
@@ -135,7 +135,7 @@
 <section class="promo_full">
     <div class="promo_full_wp">
         <div>
-            <h3>What Clients say<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
+            <h3>Khách hàng nói về chúng tôi<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
@@ -201,7 +201,7 @@
     <div class="container margin_60">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 text-center">
-                <h3>Subscribe to our Newsletter for latest news.</h3>
+                <h3>Đăng ký để nhận tin mới nhất.</h3>
                 <div id="message-newsletter"></div>
                 <form method="post" action="assets/newsletter.php" name="newsletter" id="newsletter" class="form-inline">
                     <input name="email_newsletter" id="email_newsletter" type="email" value="" placeholder="Your Email" class="form-control">

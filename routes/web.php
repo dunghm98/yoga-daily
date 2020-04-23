@@ -35,30 +35,44 @@ Route::get('/admin/dashboard', function (){
     return view('admin.dashboard');
 });
 
+// add to favorite
+Route::post('/add-to-favorite/', 'CourseController@addToFavorite')->name('addToFavorite');
+Route::get('/favorite', 'CourseController@showFavorite')->name('showFavorite');
+
+
 // add
 Route::get('/admin/collection', 'AdminController@createCollection')->name('createCollection');
 Route::get('/admin/course', 'AdminController@createCourse')->name('createCourse');;
 Route::get('/admin/lesson', 'AdminController@createLesson')->name('createLesson');;
+Route::get('/admin/level', 'AdminController@createLevel')->name('createLevel');;
+
 
 //show
 Route::get('/admin/collections', 'AdminController@showCollection')->name('showCollections');
 Route::get('/admin/courses', 'AdminController@showCourse')->name('showCourses');
 Route::get('/admin/lessons', 'AdminController@showLesson')->name('showLessons');
+Route::get('/admin/levels', 'AdminController@showLevel')->name('showLevels');
 
 //edit
 Route::get('/admin/collections/{collection}', 'AdminController@editCollection')->name('editCollection');
 Route::get('/admin/courses/{course}', 'AdminController@editCourse')->name('editCourse');
 Route::get('/admin/lessons/{lesson}', 'AdminController@editLesson')->name('editLesson');
+Route::get('/admin/levels/{level}', 'AdminController@editLevel')->name('editLevel');
+
 
 //store
 Route::post('/admin/collection', 'AdminController@storeCollection')->name('course.storeCollection');
 Route::post('/admin/course', 'AdminController@storeCourse')->name('course.storeCourse');
 Route::post('/admin/lesson', 'AdminController@storeLesson')->name('course.storeLesson');
+Route::post('/admin/level', 'AdminController@storeLevel')->name('course.storeLevel');
+
 
 //save
-Route::post('/admin/collection', 'AdminController@saveCollection')->name('course.saveCollection');
-Route::post('/admin/course', 'AdminController@saveCourse')->name('course.saveCourse');
-Route::post('/admin/lesson', 'AdminController@saveLesson')->name('course.saveLesson');
+Route::post('/admin/collection/save', 'AdminController@saveCollection')->name('course.saveCollection');
+Route::post('/admin/course/save', 'AdminController@saveCourse')->name('course.saveCourse');
+Route::post('/admin/lesson/save', 'AdminController@saveLesson')->name('course.saveLesson');
+Route::post('/admin/level/save', 'AdminController@saveLevel')->name('course.saveLevel');
+
 
 
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Collection;
 use App\Course;
 use App\Lecture;
+use App\Level;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -19,6 +20,14 @@ class AdminController extends Controller
         $collection = \App\Collection::create($data);
         return redirect(route('showCollections'));
     }
+    public function storeLevel(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+        ]);
+        $collection = \App\Level::create($data);
+        return redirect(route('showLevels'));
+    }
 
     public function storeCourse(Request $request)
     {
@@ -31,23 +40,10 @@ class AdminController extends Controller
             'link_intro_video' => 'required'
         ]);
         $course = \App\Course::create($course);
+        if($request->collection){
+            $course->setCollection($request->collection);
+        }
         return redirect(route('showCourses'));
-    }
-
-    public function createCollection()
-    {
-        return view('admin.course.collection');
-    }
-    public function createCourse()
-    {
-        $levels = \App\Level::all();
-        return view('admin.course.course', compact('levels'));
-    }
-
-    public function createLesson()
-    {
-        $courses = \App\Course::all();
-        return view('admin.course.lesson', compact('courses'));
     }
 
     public function storeLesson(Request $request)
@@ -63,6 +59,30 @@ class AdminController extends Controller
         $lesson = \App\Lecture::create($lesson);
         return redirect(route('showLessons'));
     }
+
+    public function createCollection()
+    {
+        return view('admin.course.collection');
+    }
+    public function createLevel()
+    {
+        return view('admin.course.level');
+    }
+    public function createCourse()
+    {
+        $levels = \App\Level::all();
+        $collections = \App\Collection::all();
+
+        return view('admin.course.course', compact('levels', 'collections'));
+    }
+
+    public function createLesson()
+    {
+        $courses = \App\Course::all();
+        return view('admin.course.lesson', compact('courses'));
+    }
+
+
 
     public function showCollection()
     {
@@ -81,10 +101,19 @@ class AdminController extends Controller
         $lessons = \App\Lecture::all();
         return view('admin.list.lesson', compact('lessons'));
     }
+    public function showLevel()
+    {
+        $levels = \App\Level::all();
+        return view('admin.list.level', compact('levels'));
+    }
 
     public function editCollection( Collection $collection)
     {
         return view('admin.edit.collection', compact('collection'));
+    }
+    public function editLevel( Level $level)
+    {
+        return view('admin.edit.level', compact('level'));
     }
 
     public function saveCollection(Request $request)
@@ -99,6 +128,17 @@ class AdminController extends Controller
         $collection->save();
         return redirect(route('showCollections'));
     }
+    public function saveLevel(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required',
+        ]);
+        $level = \App\Level::find($request->id);
+        $level->name = $data['name'];
+        $level->save();
+        return redirect(route('showLevels'));
+    }
+
 
     public function editCourse( Course $course)
     {
@@ -128,7 +168,9 @@ class AdminController extends Controller
         $course->level_id = $data['level_id'];
         $course->link_intro_video = $data['link_intro_video'];
         $course->save();
-        $course->setCollection($request->collection);
+        if($request->collection){
+            $course->setCollection($request->collection);
+        }
         return redirect(route('showCourses'));
     }
 

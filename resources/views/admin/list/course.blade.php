@@ -11,14 +11,14 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-7 col-auto">
-                        <h3 class="page-title">Chuyên môn</h3>
+                        <h3 class="page-title">Khoá học</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Chuyên môn</li>
+                            <li class="breadcrumb-item active">Khoá học</li>
                         </ul>
                     </div>
                     <div class="col-sm-5 col">
-                        <a href="{{ route('createCourse')  }}"  class="btn btn-primary float-right mt-2">Add</a>
+                        <a href="{{ route('createCourse')  }}"  class="btn btn-primary float-right mt-2">Thêm khoá học</a>
                     </div>
                 </div>
             </div>

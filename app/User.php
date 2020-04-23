@@ -33,7 +33,7 @@ class User extends Authenticatable
      *
      * @var array
      */
- 
+
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
@@ -41,22 +41,36 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::Class)->orderBy('created_at','DESC');
     }
+// Favorite course
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class,'user_course');
+    }
+    public function setFavoriteCourse($ids)
+    {
+        $this->courses()->sync($ids);
+    }
+
+    public function getFavoriteCourse()
+    {
+        return $this->courses()->get();
+    }
     public function profile()
     {
        return $this->hasOne(Profile::Class);
     }
     public function following()
     {
-            return $this->belongsToMany(Profile::class);  
+            return $this->belongsToMany(Profile::class);
     }
     public function like()
     {
-           return $this->belongsToMany(Post::class);  
+           return $this->belongsToMany(Post::class);
     }
     public function checkLiked($id)
     {
-        
+
         return auth()->user()->like->contains($id);
     }
-    
+
 }

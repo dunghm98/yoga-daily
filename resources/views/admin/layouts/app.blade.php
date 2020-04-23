@@ -190,7 +190,9 @@
                                 <li>
                                     <a href="{{route('showLessons')}}"><i class="fe fe-user-plus"></i> <span>Bài học</span></a>
                                 </li>
-
+                                <li>
+                                    <a href="{{route('showLevels')}}"><i class="fe fe-user-plus"></i> <span>Level</span></a>
+                                </li>
                             </ul>
                         </div>
                     </div>

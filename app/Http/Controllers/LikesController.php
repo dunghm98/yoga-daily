@@ -16,8 +16,5 @@ class LikesController extends Controller
         $post = Post::find($post_id);
         $likes = $post->liked()->count();
         echo $likes;
-        
-        
-        
     }
 }

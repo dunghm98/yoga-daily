@@ -41,11 +41,15 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Lộ trình</label>
-                                    <select name="collection" class="form-control col-md-6 select select2-selection--multiple" multiple>
-                                        <option>Lựa chọn...</option>
-                                        <option>Nam</option>
-                                        <option>Nữ</option>
+                                    <select id="collection" name="collection[]" class="form-control col-md-6 select select2-selection--multiple" multiple>
+                                        <option value="">Lựa chọn...</option>
+                                        @foreach($collections as $collection)
+                                            <option value="{{$collection->id}}">{{ $collection->title }}</option>
+                                        @endforeach
                                     </select>
+                                    @error('collection')
+                                    <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Mô tả</label>
@@ -59,7 +63,7 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Thời lượng khóa học</label>
                                     <div class="col-md-3">
-                                        <input name="duration" value="{{'duration'}}" type="text" class="form-control">
+                                        <input name="duration" value="{{old('duration')}}" type="text" class="form-control">
                                         @error('duration')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
@@ -71,6 +75,9 @@
                                             <option value="{{ $level->id }}">{{ $level->name }}</option>
                                             @endforeach
                                     </select>
+                                    @error('level_id')
+                                    <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Loại khóa học</label>
@@ -84,6 +91,9 @@
                                             <label class="custom-control-label" for="premium">Premium</label>
                                         </div>
                                     </div>
+                                    @error('is_premium')
+                                    <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Link video giới thiệu</label>

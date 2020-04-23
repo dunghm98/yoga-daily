@@ -96,7 +96,13 @@
                         @if($course->is_premium)
                         <a href="cart-page-1.html" class="btn_full">Nâng cấp tài khoản Premium</a>
                         @endif
-                        <a class="btn_outline" href="#"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</a>
+                        @foreach($course->users as $user)
+                            @if(auth()->user()->id == $user->id)
+                                <p class="btn_outline"><i class=" icon-heart"></i> Khoá học yêu thích</p>
+                                @else
+                                    <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
+                                @endif
+                                    @endforeach
                     </div>
                     <!-- End box_style -->
                     <div id="trainer_col">
@@ -139,6 +145,29 @@
             animatedIn:'bounceIn',
             animatedOut:'bounceOut',
             color:'#4088DA'
+        });
+
+
+        $('#add-to-favorite').click(function () {
+            var course_id  = $(this).attr('data-course');
+            // $('#like_'+post_id).toggleClass("liked");
+            $.ajax({
+                url:"/add-to-favorite",
+                method:"POST",
+                data:{
+                    "_token": "{{ csrf_token() }}",
+                    course_id:course_id,
+                },
+                success:function(data){
+                    console.log(data['status'])
+                    if(data['status'] ===  500){
+                        window.location.href = '/login';
+                    }
+                    else
+                    $('#add-to-favorite').html('<i class=" icon-heart"></i>Đã thêm vào danh sách yêu thích');
+                }
+
+            })
         });
     </script>
     @endsection
