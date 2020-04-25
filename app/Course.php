@@ -62,6 +62,13 @@ class Course extends Model
         return $image;
     }
 
+    public function getEmbedVideo()
+    {
+        $url = $this->link_intro_video;
+        $videoId = $this->getVideoId($url);
+        return 'https://www.youtube.com/embed/'.$videoId;
+    }
+
     public function getVideoId($url)
     {
         preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $url, $matches);

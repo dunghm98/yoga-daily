@@ -6,10 +6,10 @@
 
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_short.jpg" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ $course->getThumbnail() }}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
             <h1>{{$course->title}}</h1>
-            <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+            <p>"{{ $course->overview }}"</p>
         </div>
     </section>
     <!-- End section -->
@@ -18,7 +18,7 @@
     <div class="container margin_60">
         <div class="row">
             <div class="col-md-8 ">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/PknU1QEV4Zo" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="{{ $course->getEmbedVideo() }}" allowfullscreen></iframe>
                 <ul id="course_info">
                     <li><i class="icon-clock"></i> {{$course->duration}} </li>
                     <li><i class=" icon-chart-bar-5"></i> {{$course->level->name}} level</li>
