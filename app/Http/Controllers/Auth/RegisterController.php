@@ -7,7 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -29,11 +29,11 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    
-    
-     
+
+
+
  //  protected $redirectTo = '/';
-    
+
 
     /**
      * Create a new controller instance.
@@ -76,11 +76,11 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
         $user->profile()->create([
-            'title' => "Made by Tùng Dương"
+            'title' => "Made by Daily Yoga"
         ]);
         $user_id = $user->id;
         return $user;
-        
+
     }
     // ghi đề phương thước
     public function redirectTo()
@@ -88,5 +88,5 @@ class RegisterController extends Controller
         $user_id = Auth::user()->id;
         return "/profile/{$user_id}";
     }
-    
+
 }
