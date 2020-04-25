@@ -3,9 +3,9 @@
 use Illuminate\Support\Str;
 
 $url = parse_url(getenv('DATABASE_URL'));
-$host = $url['host']??null;
-$username = $url['user']??null;
-$password = $url['pass']??null;
+$host = $url['host'] ?? null;
+$username = $url['user'] ?? null;
+$password = $url['pass'] ?? null;
 $database = substr($url['path'], 1);
 
 
@@ -104,7 +104,7 @@ return [
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
             'schema' => 'public',
-           
+
         ],
 
         'sqlsrv' => [
