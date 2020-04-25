@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
         $levels = \App\Level::all();
         $courses = \App\Course::all();
-        return view('home', compact('courses', 'levels', 'collections'));
+        return view('home', compact('courses', 'levels'));
     }
 
     public function community()
