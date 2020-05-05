@@ -55,7 +55,7 @@
                                                     <a class="btn btn-sm bg-success-light" href="{{ route('editCourse', $course->id) }}">
                                                         <i class="fe fe-pencil"></i> Edit
                                                     </a>
-                                                    <a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
+                                                    <a  href="/admin/course/delete/{{$course->id}}" class="btn btn-sm bg-danger-light">
                                                         <i class="fe fe-trash"></i> Delete
                                                     </a>
                                                 </div>

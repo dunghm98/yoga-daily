@@ -4,7 +4,7 @@
             <div class="row ">
                 <div class="col-md-3 col-sm-12">
                     <p>
-                        <img src="img/logo.png" width="95" height="27" alt="Lovefit" data-retina="true">
+                        <img src="img/beer.png" width="95" height="27" alt="Lovefit" data-retina="true">
                     </p>
                     <div id="social">
                         <ul>
@@ -60,7 +60,7 @@
     <!-- End footer -->
     <div id="copy">
         <div class="container">
-            © LoveFit 2016 - All rights reserved.
+            © Daily Yoga 2020 - All rights reserved.
         </div>
     </div>
     <!-- End copy -->

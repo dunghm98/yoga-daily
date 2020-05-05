@@ -203,5 +203,28 @@ class AdminController extends Controller
         return redirect(route('showLessons'));
     }
 
+    public function deleteCollection(Collection $collection)
+    {
+        $collection = \App\Collection::destroy($collection->id);
+        return redirect(route('showCollections'));
+    }
+    public function deleteCourse(Course $course)
+    {
+        $course = \App\Course::destroy($course->id);
+        return redirect(route('showCourses'));
+    }
+
+    public function deleteLesson(Lecture $lecture)
+    {
+        $course = \App\Lecture::destroy($lecture->id);
+        return redirect(route('showLessons'));
+    }
+
+    public function deleteLevel(Level $level)
+    {
+        $course = \App\Level::destroy($level->id);
+        return redirect(route('showLevels'));
+    }
+
 
 }

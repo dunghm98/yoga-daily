@@ -5,7 +5,7 @@
     <!-- SubHeader =============================================== -->
     <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>LoveFit Workout Videos</h1>
+            <h1>Yoga Daily Workout Videos</h1>
             <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
         </div>
     </section>

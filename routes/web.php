@@ -73,7 +73,11 @@ Route::post('/admin/course/save', 'AdminController@saveCourse')->name('course.sa
 Route::post('/admin/lesson/save', 'AdminController@saveLesson')->name('course.saveLesson');
 Route::post('/admin/level/save', 'AdminController@saveLevel')->name('course.saveLevel');
 
-
+//delete
+Route::get('/admin/collection/delete/{collection}', 'AdminController@deleteCollection')->name('deleteCollection');
+Route::get('/admin/course/delete/{course}', 'AdminController@deleteCourse')->name('deleteCourse');
+Route::get('/admin/lesson/delete/{lecture}', 'AdminController@deleteLesson')->name('deleteLesson');
+Route::get('/admin/level/delete/{level}', 'AdminController@deleteLevel')->name('deleteLevel');
 
 
 Route::get('/home','PostsController@index');

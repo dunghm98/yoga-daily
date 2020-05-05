@@ -87,7 +87,7 @@
                     <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
                     <div class="main-menu">
                         <div id="header_menu">
-                            <img src="img/logo.png" width="95" height="27" alt="Lovefit" data-retina="true">
+                            <img src="img/beer.png" width="95" height="27" alt="Lovefit" data-retina="true">
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
                         <ul>
