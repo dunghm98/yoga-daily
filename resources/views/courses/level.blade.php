@@ -3,10 +3,10 @@
 @section('content')
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/promo_bg1.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>{{$level->name}}</h1>
-{{--            <p>"{{$collection->overview}}"</p>--}}
+            <h1 style="text-shadow: black 0.1em 0.1em 0.2em;">{{$level->name}}</h1>
+{{--            <p style="text-shadow: black 0.1em 0.1em 0.2em;">"{{$collection->overview}}"</p>--}}
         </div>
     </section>
     <!-- End section -->

@@ -8,7 +8,7 @@
         <div class="content container-fluid">
 
             <!-- Page Header -->
-            <div class="page-header">
+            <!-- <div class="page-header">
                 <div class="row">
                     <div class="col">
                         <h3 class="page-title">Basic Inputs</h3>
@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- /Page Header -->
             <form action="{{ route('course.storeLesson') }}" method="post">
                 @csrf
@@ -41,12 +41,14 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Khóa học</label>
-                                    <select name="course_id" class="form-control col-md-6 select">
-                                        <option>Lựa chọn...</option>
-                                        @foreach($courses as $course)
-                                            <option value="{{ $course->id }}">{{ $course->title }}</option>
-                                        @endforeach
-                                    </select>
+                                    <div class="col-md-10">
+                                        <select name="course_id" class="form-control col-md-6 select">
+                                            <option>Lựa chọn...</option>
+                                            @foreach($courses as $course)
+                                                <option value="{{ $course->id }}">{{ $course->title }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Link videos</label>
@@ -84,7 +86,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row" style="margin-left: 0% !important;">
                                     <button type="submit" class="btn btn-primary">Lưu</button>
                                 </div>
                             </form>

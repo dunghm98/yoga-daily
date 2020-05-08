@@ -31,9 +31,11 @@
                                 <table class="datatable table table-hover table-center mb-0">
                                     <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>Mã LT</th>
                                         <th>Lộ trình</th>
-                                        <th class="text-right">Actions</th>
+                                        <th class="text-right">
+                                            <!-- Actions -->
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
