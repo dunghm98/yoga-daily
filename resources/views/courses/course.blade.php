@@ -44,30 +44,34 @@
                 </div>
                 <!-- End row -->
                 <hr class="add_bottom_30">
-                @if($course->is_premium && auth()->user()->isPremiumUser)
-                    @foreach($course->lectures as $lesson)
-                        <div class="workoutlist">
-                            <div class="row">
-                                <div class="col-sm-5">
-                                    <figure>
-                                        <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
-                                            <i class="arrow_triangle-right_alt2"></i>
-                                            <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
-                                        </a>
-                                        <span>0:35</span>
-                                        <em></em>
-                                    </figure>
-                                </div>
-                                <div class="col-sm-7">
-                                    <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
-                                    <p>{{$lesson->description}}</p>
+                @if(auth()->user())
+                    @if($course->is_premium && auth()->user()->isPremiumUser)
+                        @foreach($course->lectures as $lesson)
+                            <div class="workoutlist">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <figure>
+                                            <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
+                                                <i class="arrow_triangle-right_alt2"></i>
+                                                <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
+                                            </a>
+                                            <span>0:35</span>
+                                            <em></em>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
+                                        <p>{{$lesson->description}}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- End workoutlist -->
-                    @endforeach
-                @else
-                    <h3>Xin mời nâng cấp lên tài khoản Premium để xem khoá học này</h3>
+                            <!-- End workoutlist -->
+                        @endforeach
+                    @else
+                        <h3>Xin mời nâng cấp lên tài khoản Premium để xem khoá học này</h3>
+                    @endif
+                    @else
+                        <h3>Xin mời đăng nhập vào tài khoản Premium để xem khoá học này</h3>
                     @endif
 
 
@@ -97,8 +101,14 @@
                         <p><small style="line-height:10px">Choro lobortis euripidis cu qui, ex melius labitur conceptam eos, sumo possim sea in. Te platonem ullamcorper per.</small>
                         </p>
                         <hr>
-                        @if($course->is_premium && !auth()->user()->isPremiumUser)
-                            <a href="cart-page-1.html" class="btn_full">Nâng cấp tài khoản Premium</a>
+                       @if(auth()->user())
+                            @if($course->is_premium && !auth()->user()->isPremiumUser)
+                                <a href="/upgrade-to-premium" class="btn_full">Nâng cấp tài khoản Premium</a>
+                            @endif
+                           @else
+                            @if($course->is_premium)
+                                <a href="/login" class="btn_full">Login tài khoản Premium</a>
+                            @endif
                         @endif
                         @foreach($course->users as $user)
                             @if(auth()->user()->id == $user->id)
