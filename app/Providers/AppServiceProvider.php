@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // User::observe(UserObserver::class);
         If (env('APP_ENV') !== 'local') {
-            $this->app['request']->server->set('HTTP', true);
+            $this->app['request']->server->set('HTTPS', true);
         }
     }
 }
