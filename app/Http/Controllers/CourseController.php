@@ -10,8 +10,7 @@ class CourseController extends Controller
 
     public function showFavorite()
     {
-        $favoriteCourses = auth()->user()->getFavoriteCourse();
-        return view('courses.favorite', compact('favoriteCourses'));
+        return view('courses.favorite');
     }
     //
     public function addToFavorite(Request $request)

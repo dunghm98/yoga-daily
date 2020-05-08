@@ -153,36 +153,22 @@
                             @if($course->is_premium && !auth()->user()->isPremiumUser)
                                 <a href="/upgrade-to-premium" class="btn_full">Nâng cấp tài khoản Premium</a>
                             @endif
-                           @else
+                        @else
                             @if($course->is_premium)
                                 <a href="/login" class="btn_full">Login tài khoản Premium</a>
                             @endif
                         @endif
-                        @foreach($course->users as $user)
+                        @forelse($course->users as $user)
                             @if(auth()->user()->id == $user->id)
-                                <p class="btn_outline"><i class=" icon-heart"></i> Khoá học yêu thích</p>
-                                @else
-                                    <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
-                                @endif
-                                    @endforeach
+                                <p class="btn_outline bg-danger"><i class=" icon-heart"></i> Khoá học yêu thích</p>
+                            @else
+                                <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
+                            @endif
+                        @empty
+                            <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
+                        @endforelse
                     </div>
                     <!-- End box_style -->
-{{--                    <div id="trainer_col">--}}
-{{--                        <h4>About the trainer</h4>--}}
-{{--                        <div class="media">--}}
-{{--                            <div class="pull-right">--}}
-{{--                                <a href="#"><img src="img/avatar1.jpg" class="img-circle" alt="">--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="media-body">--}}
-{{--                                <h5 class="media-heading">Marc Twain</h5>--}}
-{{--                                <p>--}}
-{{--                                    Mea assum nemore erroribus ei, eu sed movet animal eleifend. Id usu recteque consequuntur, nam elitr veniam legere ex. Nec iriure scaevola intellegat ea, cu cum erroribus concludaturque. In quis solum legimus qui.--}}
-{{--                                    <br><a href="trainer-profile.html">View profile</a>--}}
-{{--                                </p>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                 </div>
                 <!-- End theiaStickySidebar -->
             </div>
