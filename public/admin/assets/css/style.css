@@ -890,7 +890,8 @@ button.bg-danger:hover {
 }
 .card {
     border: 1px solid #f0f0f0;
-    margin-bottom: 1.875rem;
+	margin-bottom: 1.875rem;
+	margin-top: 0%;
 }
 .card-body {
 	padding: 1.5rem;
@@ -1979,9 +1980,9 @@ html.menu-opened body {
 .page-wrapper > .content {
 	padding: 1.875rem 1.875rem 0;
 }
-.page-header {
+/* .page-header {
 	margin-bottom: 1.875rem;
-}
+} */
 .page-header .breadcrumb {
     background-color: transparent;
     color: #6c757d;

@@ -3,37 +3,57 @@
 
 
     <!-- Slider -->
-    <div id="full-slider-wrapper">
-        <div id="layerslider" style="width:100%;height:667px;">
+    <!-- <div id="full-slider-wrapper" style="margin-top: -6%;"> -->
+        <!-- <div id="layerslider" style="width:100%;height:667px;"> -->
             <!-- first slide -->
-            <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:5;">
-                <img src="https://suckhoebabau.co/wp-content/uploads/2019/04/Yoga-c%C3%B3-nh%E1%BB%AFng-c%E1%BA%A5p-%C4%91%E1%BB%99-n%C3%A0o.jpg" class="ls-bg" alt="Slide background" width="1600" height="667">
+            <!-- <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:5;">
+                <img src="{{asset('img/beach-yoga.jpg')}}" class="ls-bg" alt="Slide background" width="1600" height="667">
                 <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Video Hướng Dẫn Fitness<br>
                     ở mọi nơi, cho mọi người</h3>
                 <p class="ls-l slide_typo_2" style="top:62%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
                     Cardio / Strenght / Yoga
                 </p>
-            </div>
+            </div> -->
             <!-- second slide -->
-            <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
+            <!-- <div class="ls-slide" data-ls="slidedelay: 5000; transition2d:85;">
                 <img src="https://www.hoteliermaldives.com/wp-content/uploads/Shutterstock-Maldives-Wellness-Yoga-Beach-lowres.jpg" class="ls-bg" alt="Slide background" width="1600" height="667">
                 <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Video chất lượng cao<br>
                     Dành cho mọi trình độ</h3>
                 <p class="ls-l slide_typo_2" style="top:62%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
                     Cardio / Strenght / Yoga
                 </p>
-            </div>
+            </div> -->
             <!-- third slide -->
-            <div class="ls-slide" data-ls="slidedelay:5000; transition2d:103;">
+            <!-- <div class="ls-slide" data-ls="slidedelay:5000; transition2d:103;">
                 <img src="https://yogacuocsong.com/wp-content/uploads/2019/03/Top-nh%E1%BB%AFng-B%C3%AD-m%E1%BA%ADt-v%E1%BB%81-Yoga-m%C3%A0-b%E1%BA%A1n-n%C3%AAn-hi%E1%BB%83u-%C4%91%E1%BB%83-tr%C3%A1nh-nh%E1%BB%AFng-hi%E1%BB%83u-l%E1%BA%A7m-2.jpg" class="ls-bg" alt="Slide background" width="1600" height="667">
                 <h3 class="ls-l slide_typo" style="top: 50%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">Nâng cao sức khoẻ</h3>
                 <p class="ls-l slide_typo_2" style="top:56%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
                     Cardio / Strenght / Yoga
                 </p>
-            </div>
-        </div>
-    </div>
+            </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
     <!-- End layerslider -->
+    <!-- SubHeader =============================================== -->
+    <section class="header-video" style="height: 500px !important;"> -->
+		 <div id="hero_video">
+			<div id="sub_content">
+				<div class="mobile_fix" style="text-shadow: black 0.1em 0.1em 0.2em;">
+					<h1>Fitness <strong>Videos</strong> Workout</h1>
+					<p>
+                    Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai.
+					</p>
+				</div>
+			</div>
+			<!-- Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai.
+			End sub_content -->
+        </div>
+        <video autoplay muted>
+            <source src="{{asset('video/video.mp4')}}" type="video/mp4">
+        </video>
+	</section>
+	<!-- End Header video -->
+
 <!-- End SubHeader ============================================ -->
 
 <section id="feat">
@@ -138,17 +158,17 @@
             <h3>Khách hàng nói về chúng tôi<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
+                    <div class="col-md-9 col-md-offset-1">
                         <div class="carousel_testimonials">
                             <div>
                                 <div class="box_overlay">
                                     <div class="pic">
                                         <figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
                                         </figure>
-                                        <h4>Roberta<small>12 October 2015</small></h4>
+                                        <h4>Dinh Lê<small>12 February 2020</small></h4>
                                     </div>
                                     <div class="comment">
-                                        "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud."
+                                        "“Tôi rất thích tập yoga, tuy mới làm quen với bộ môn này có 50 ngày thôi, nhưng tôi thấy cơ thể có những chuyển biến bước đầu rất tốt với các khóa học mà tôi đã chọn.”"
                                     </div>
                                 </div>
                                 <!-- End box_overlay -->
@@ -159,10 +179,10 @@
                                     <div class="pic">
                                         <figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
                                         </figure>
-                                        <h4>Roberta<small>12 October 2015</small></h4>
+                                        <h4>Liên Nguyễn<small>12 March 2020</small></h4>
                                     </div>
                                     <div class="comment">
-                                        "No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+                                        "Thật sự là rất hiệu quả, trước giờ mình cũng muốn học yoga lâu rồi mà chưa có điều kiện, thời gian và cũng ngại đến phòng tập."
                                     </div>
                                 </div>
                                 <!-- End box_overlay -->
@@ -173,10 +193,10 @@
                                     <div class="pic">
                                         <figure><img src="img/testimonial_1.jpg" alt="" class="img-circle">
                                         </figure>
-                                        <h4>Roberta<small>12 October 2015</small></h4>
+                                        <h4>Hương Đỗ<small>12 Janruary 2020</small></h4>
                                     </div>
                                     <div class="comment">
-                                        "No nam indoctum accommodare, vix ei discere civibus philosophia. Vis ea dicant diceret ocurreret."
+                                        "Thật sự lúc đầu cũng không nghĩ là hiệu quả đến vậy. Nhưng giờ càng tập càng say, hôm nào không tập là mình cảm thấy khó chịu lắm."
                                     </div>
                                 </div>
                                 <!-- End box_overlay -->
@@ -225,9 +245,9 @@
     <script src="{{ asset('layerslider/js/greensock.js') }}"></script>
     <script src="{{ asset('layerslider/js/layerslider.transitions.js') }}"></script>
     <script src="{{ asset('layerslider/js/layerslider.kreaturamedia.jquery.js') }}"></script>
-    <script type="text/javascript">
-        'use strict';
-        $('#layerslider').layerSlider({
+    <script type="text/javascript"
+        $('#vid').play();
+        <!-- $('#layerslider').layerSlider({
             autoStart: true,
             navButtons: false,
             navStartStop: false,
@@ -238,6 +258,6 @@
             skinsPath: 'layerslider/skins/'
             // Please make sure that you didn't forget to add a comma to the line endings
             // except the last line!
-        });
+        }); -->
     </script>
 @endsection
