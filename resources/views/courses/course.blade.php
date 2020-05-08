@@ -45,7 +45,33 @@
                 <!-- End row -->
                 <hr class="add_bottom_30">
                 @if(auth()->user())
-                    @if($course->is_premium && auth()->user()->isPremiumUser)
+                    @if($course->is_premium)
+                        @if(auth()->user()->isPremiumUser)
+                            @foreach($course->lectures as $lesson)
+                                <div class="workoutlist">
+                                    <div class="row">
+                                        <div class="col-sm-5">
+                                            <figure>
+                                                <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
+                                                    <i class="arrow_triangle-right_alt2"></i>
+                                                    <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
+                                                </a>
+                                                <span>0:35</span>
+                                                <em></em>
+                                            </figure>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
+                                            <p>{{$lesson->description}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End workoutlist -->
+                            @endforeach
+                        @else
+                            <h3>Xin mời nâng cấp lên tài khoản Premium để xem khoá học này</h3>
+                        @endif
+                    @else
                         @foreach($course->lectures as $lesson)
                             <div class="workoutlist">
                                 <div class="row">
@@ -67,12 +93,34 @@
                             </div>
                             <!-- End workoutlist -->
                         @endforeach
-                    @else
-                        <h3>Xin mời nâng cấp lên tài khoản Premium để xem khoá học này</h3>
                     @endif
-                    @else
+                @else
+                    @if($course->is_premium)
                         <h3>Xin mời đăng nhập vào tài khoản Premium để xem khoá học này</h3>
-                    @endif
+                        @else
+                        @foreach($course->lectures as $lesson)
+                            <div class="workoutlist">
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <figure>
+                                            <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
+                                                <i class="arrow_triangle-right_alt2"></i>
+                                                <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
+                                            </a>
+                                            <span>0:35</span>
+                                            <em></em>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
+                                        <p>{{$lesson->description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End workoutlist -->
+                        @endforeach
+                        @endif
+                @endif
 
 
             </div>
