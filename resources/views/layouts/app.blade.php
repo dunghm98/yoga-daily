@@ -40,7 +40,7 @@
 
 
 <!-- Header ================================================== -->
-    <header class="position-relative">
+    <header class="position-relative" style="background-color: rgba(38, 173, 193, 0.1); ">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3">
@@ -51,7 +51,7 @@
                 </div>
                 <nav class="col-xs-9">
                     @if (!Auth::check())
-                    <ul id="access_top">
+                    <ul id="access_top" style="margin-top: 20px;">
                         <li><a href="#" class="search-overlay-menu-btn"><i class="icon-search-6"></i></a>
                         </li>
                         <li><a href="/login" class="hidden-xs">Login</a>
@@ -103,7 +103,7 @@
                                     @endforeach
                                 </ul>
                             </li>
-                            <li><a href="#0">Danh mục khóa học level<i class="icon-down-open-mini"></i></a>
+                            <li><a href="#0">Danh mục khóa học<i class="icon-down-open-mini"></i></a>
                                 <ul>
                                     @foreach(\App\Level::all() as $level)
                                         <li>

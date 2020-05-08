@@ -8,7 +8,7 @@
         <div class="content container-fluid">
 
             <!-- Page Header -->
-            <div class="page-header">
+            <!-- <div class="page-header">
                 <div class="row">
                     <div class="col">
                         <h3 class="page-title">Basic Inputs</h3>
@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- /Page Header -->
             <form action="{{ route('course.saveLevel') }}" method="post">
                 @csrf
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
+                                <div class="form-group row" style="margin-left: 0% !important;">
                                     <button type="submit" class="btn btn-primary">Lưu</button>
                                 </div>
                         </div>

@@ -41,15 +41,17 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Lộ trình</label>
-                                    <select id="collection" name="collection[]" class="form-control col-md-6 select select2-selection--multiple" multiple>
-                                        <option value="">Lựa chọn...</option>
-                                        @foreach($collections as $collection)
-                                            <option value="{{$collection->id}}">{{ $collection->title }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('collection')
-                                    <small class="text-danger">{{ $message }}</small>
-                                    @enderror
+                                    <div class="col-md-10">
+                                        <select id="collection" name="collection[]" class="form-control col-md-5 select select2-selection--multiple" multiplestyle="margin-left: 2% !important;">
+                                            <option value="">Lựa chọn...</option>
+                                            @foreach($collections as $collection)
+                                                <option value="{{$collection->id}}">{{ $collection->title }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('collection')
+                                        <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Mô tả</label>
@@ -81,19 +83,21 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Loại khóa học</label>
-                                    <div id="number-of-hour col-md-8">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="free" name="is_premium" value="0" checked="" required="">
-                                            <label class="custom-control-label" for="free">Miễn phí</label>
+                                    <div  class="col-md-10">
+                                        <div id="number-of-hour col-md-8">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="free" name="is_premium" value="0" checked="" required="">
+                                                <label class="custom-control-label" for="free">Miễn phí</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="premium" name="is_premium" value="1" required="">
+                                                <label class="custom-control-label" for="premium">Premium</label>
+                                            </div>
                                         </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" id="premium" name="is_premium" value="1" required="">
-                                            <label class="custom-control-label" for="premium">Premium</label>
-                                        </div>
+                                        @error('is_premium')
+                                        <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
-                                    @error('is_premium')
-                                    <small class="text-danger">{{ $message }}</small>
-                                    @enderror
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Link video giới thiệu</label>
@@ -104,7 +108,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="form-group row">
+                                <div class="form-group row" style="margin-left: 0% !important;">
                                     <button type="submit" class="btn btn-primary">Lưu</button>
                                 </div>
                             </form>

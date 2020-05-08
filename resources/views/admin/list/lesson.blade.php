@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-5 col">
-                        <a href="{{ route('createLesson')  }}"  class="btn btn-primary float-right mt-2">Add</a>
+                        <a href="{{ route('createLesson')  }}"  class="btn btn-primary float-right mt-2">Thêm bài học</a>
                     </div>
                 </div>
             </div>
@@ -31,9 +31,11 @@
                                 <table class="datatable table table-hover table-center mb-0">
                                     <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>Mã BH</th>
                                         <th>Bài học</th>
-                                        <th class="text-right">Actions</th>
+                                        <th class="text-right">
+                                            <!-- Actions -->
+                                        </th>
                                     </tr>
                                     </thead>
                                     <tbody>
