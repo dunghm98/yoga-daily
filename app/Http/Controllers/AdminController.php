@@ -18,7 +18,16 @@ class AdminController extends Controller
     //
     public function showDashBoard()
     {
-        return view('admin.dashboard');
+        $countCollection = \App\Collection::all()->count();
+        $countCourse = \App\Course::all()->count();
+        $countLesson = \App\Lecture::all()->count();
+        $countUser = \App\User::all()->count();
+        $dataCount = [];
+        $dataCount['collection'] = $countCollection;
+        $dataCount['course'] = $countCourse;
+        $dataCount['lesson'] = $countLesson;
+        $dataCount['user'] = $countUser;
+        return view('admin.dashboard', compact('dataCount'));
     }
     public function storeCollection(Request $request)
     {

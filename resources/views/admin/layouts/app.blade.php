@@ -178,22 +178,22 @@
                                 <li class="menu-title">
                                     <span>Main</span>
                                 </li>
-                                <li class="active">
+                                <li class="{{ Request::path() == 'admin/dashboard' ? 'active' : '' }}">
                                     <a href="{{route('showDashBoard')}}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::path() == 'admin/collections' ? 'active' : '' }}" >
                                     <a href="{{ route('showCollections') }}"><i class="fe fe-layout"></i> <span>Lộ trình yoga</span></a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::path() == 'admin/courses' ? 'active' : '' }}">
                                     <a href="{{route('showCourses')}}"><i class="fe fe-users"></i> <span>Khóa học</span></a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::path() == 'admin/lessons' ? 'active' : '' }}">
                                     <a href="{{route('showLessons')}}"><i class="fe fe-user-plus"></i> <span>Bài học</span></a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::path() == 'admin/levels' ? 'active' : '' }}">
                                     <a href="{{route('showLevels')}}"><i class="fe fe-user-plus"></i> <span>Level</span></a>
                                 </li>
-                                <li>
+                                <li class="{{ Request::path() == 'admin/users' ? 'active' : '' }}">
                                     <a href="{{route('showUsers')}}"><i class="fe fe-user-plus"></i> <span>User</span></a>
                                 </li>
                             </ul>

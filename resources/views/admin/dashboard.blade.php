@@ -28,7 +28,7 @@
 											<i class="fe fe-users"></i>
 										</span>
                                 <div class="dash-count">
-                                    <h3>168</h3>
+                                    <h3>{{$dataCount['collection']}}</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
@@ -48,7 +48,7 @@
 											<i class="fe fe-credit-card"></i>
 										</span>
                                 <div class="dash-count">
-                                    <h3>487</h3>
+                                    <h3>{{$dataCount['course']}}</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
@@ -69,7 +69,7 @@
 											<i class="fe fe-money"></i>
 										</span>
                                 <div class="dash-count">
-                                    <h3>485</h3>
+                                    <h3>{{$dataCount['lesson']}}</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
@@ -90,12 +90,12 @@
 											<i class="fe fe-folder"></i>
 										</span>
                                 <div class="dash-count">
-                                    <h3>$62523</h3>
+                                    <h3>{{$dataCount['user']}}</h3>
                                 </div>
                             </div>
                             <div class="dash-widget-info">
 
-                                <h6 class="text-muted">Level</h6>
+                                <h6 class="text-muted">User</h6>
                                 <div class="progress progress-sm">
                                     <div class="progress-bar bg-warning w-50"></div>
                                 </div>
@@ -104,238 +104,36 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 col-lg-6">
+{{--            <div class="row">--}}
+{{--                <div class="col-md-12 col-lg-6">--}}
 
-                    <!-- Sales Chart -->
-                    <div class="card card-chart">
-                        <div class="card-header">
-                            <h4 class="card-title">Giao dịch</h4>
-                        </div>
-                        <div class="card-body">
-                            <div id="morrisArea"></div>
-                        </div>
-                    </div>
-                    <!-- /Sales Chart -->
+{{--                    <!-- Sales Chart -->--}}
+{{--                    <div class="card card-chart">--}}
+{{--                        <div class="card-header">--}}
+{{--                            <h4 class="card-title">Giao dịch</h4>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-body">--}}
+{{--                            <div id="morrisArea"></div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <!-- /Sales Chart -->--}}
 
-                </div>
-                <div class="col-md-12 col-lg-6">
+{{--                </div>--}}
+{{--                <div class="col-md-12 col-lg-6">--}}
 
-                    <!-- Invoice Chart -->
-                    <div class="card card-chart">
-                        <div class="card-header">
-                            <h4 class="card-title">Trạng thái</h4>
-                        </div>
-                        <div class="card-body">
-                            <div id="morrisLine"></div>
-                        </div>
-                    </div>
-                    <!-- /Invoice Chart -->
+{{--                    <!-- Invoice Chart -->--}}
+{{--                    <div class="card card-chart">--}}
+{{--                        <div class="card-header">--}}
+{{--                            <h4 class="card-title">Trạng thái</h4>--}}
+{{--                        </div>--}}
+{{--                        <div class="card-body">--}}
+{{--                            <div id="morrisLine"></div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <!-- /Invoice Chart -->--}}
 
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 d-flex">
-
-                    <!-- Recent Orders -->
-                    <div class="card card-table flex-fill">
-                        <div class="card-header">
-                            <h4 class="card-title">Danh sách gia sư</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-center mb-0">
-                                    <thead>
-                                    <tr>
-                                        <th>Tên gia sư</th>
-                                        <th>Chuyên ngành</th>
-                                        <th>Thu nhập</th>
-                                        <th>Đánh giá</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Dr. Ruby Perrin</a>
-                                            </h2>
-                                        </td>
-                                        <td>Dental</td>
-                                        <td>$3200.00</td>
-                                        <td>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star-o text-secondary"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Dr. Darren Elder</a>
-                                            </h2>
-                                        </td>
-                                        <td>Dental</td>
-                                        <td>$3100.00</td>
-                                        <td>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star-o text-secondary"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-03.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Dr. Deborah Angel</a>
-                                            </h2>
-                                        </td>
-                                        <td>Cardiology</td>
-                                        <td>$4000.00</td>
-                                        <td>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star-o text-secondary"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-04.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Dr. Sofia Brient</a>
-                                            </h2>
-                                        </td>
-                                        <td>Urology</td>
-                                        <td>$3200.00</td>
-                                        <td>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star-o text-secondary"></i>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-05.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Dr. Marvin Campbell</a>
-                                            </h2>
-                                        </td>
-                                        <td>Orthopaedics</td>
-                                        <td>$3500.00</td>
-                                        <td>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star text-warning"></i>
-                                            <i class="fe fe-star-o text-secondary"></i>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Recent Orders -->
-
-                </div>
-                <div class="col-md-6 d-flex">
-
-                    <!-- Feed Activity -->
-                    <div class="card  card-table flex-fill">
-                        <div class="card-header">
-                            <h4 class="card-title">Danh sách học sinh</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-center mb-0">
-                                    <thead>
-                                    <tr>
-                                        <th>Tên học sinh</th>
-                                        <th>Điện thoại</th>
-                                        <th>Lần cuối đăng nhập</th>
-                                        <th>Thanh toán</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Charlene Reed </a>
-                                            </h2>
-                                        </td>
-                                        <td>8286329170</td>
-                                        <td>20 Oct 2019</td>
-                                        <td class="text-right">$100.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient2.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Travis Trimble </a>
-                                            </h2>
-                                        </td>
-                                        <td>2077299974</td>
-                                        <td>22 Oct 2019</td>
-                                        <td class="text-right">$200.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Carl Kelly</a>
-                                            </h2>
-                                        </td>
-                                        <td>2607247769</td>
-                                        <td>21 Oct 2019</td>
-                                        <td class="text-right">$250.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
-                                                <a href="profile.html"> Michelle Fairfax</a>
-                                            </h2>
-                                        </td>
-                                        <td>5043686874</td>
-                                        <td>21 Sep 2019</td>
-                                        <td class="text-right">$150.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h2 class="table-avatar">
-                                                <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
-                                                <a href="profile.html">Gina Moore</a>
-                                            </h2>
-                                        </td>
-                                        <td>9548207887</td>
-                                        <td>18 Sep 2019</td>
-                                        <td class="text-right">$350.00</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Feed Activity -->
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-
-
-                </div>
-            </div>
+{{--                </div>--}}
+{{--            </div>--}}
 
         </div>
     </div>
