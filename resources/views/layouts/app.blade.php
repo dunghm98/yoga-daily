@@ -44,7 +44,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3">
-                    <a href="index.html" id="logo">
+                    <a href="/" id="logo">
                         <img src="{{ asset('img/beer.png') }}" width="95" height="27" alt="" data-retina="true" class="logo_normal">
                         <img src="{{ asset('img/beer.png') }}" width="95" height="27" alt="" data-retina="true" class="logo_sticky">
                     </a>

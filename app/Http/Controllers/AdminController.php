@@ -6,11 +6,20 @@ use App\Collection;
 use App\Course;
 use App\Lecture;
 use App\Level;
+use App\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     //
+    public function showDashBoard()
+    {
+        return view('admin.dashboard');
+    }
     public function storeCollection(Request $request)
     {
         $data = $request->validate([
@@ -88,6 +97,11 @@ class AdminController extends Controller
     {
         $collections =  \App\Collection::all();
         return view('admin.list.collection', compact('collections'));
+    }
+    public function showUser()
+    {
+        $users =  \App\User::all();
+        return view('admin.list.user', compact('users'));
     }
 
     public function showCourse()
@@ -224,6 +238,17 @@ class AdminController extends Controller
     {
         $course = \App\Level::destroy($level->id);
         return redirect(route('showLevels'));
+    }
+
+    public function setPremiumUser(Request $request)
+    {
+        $user = \App\User::find($request->user_id);
+        if($request->status==0)
+            $user->isPremiumUser = 1;
+        if($request->status==1)
+            $user->isPremiumUser = 0;
+        $user->save();
+
     }
 
 

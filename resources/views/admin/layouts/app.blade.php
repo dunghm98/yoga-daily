@@ -40,10 +40,10 @@
 
                     <!-- Logo -->
                     <div class="header-left">
-                        <a href="index.html" class="logo">
+                        <a href="{{route('showDashBoard')}}" class="logo">
                             <img src="assets/img/beer.png" alt="Logo">
                         </a>
-                        <a href="index.html" class="logo logo-small">
+                        <a href="{{route('showDashBoard')}}" class="logo logo-small">
                             <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
                         </a>
                     </div>
@@ -179,7 +179,7 @@
                                     <span>Main</span>
                                 </li>
                                 <li class="active">
-                                    <a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                                    <a href="{{route('showDashBoard')}}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                                 </li>
                                 <li>
                                     <a href="{{ route('showCollections') }}"><i class="fe fe-layout"></i> <span>Lộ trình yoga</span></a>
@@ -192,6 +192,9 @@
                                 </li>
                                 <li>
                                     <a href="{{route('showLevels')}}"><i class="fe fe-user-plus"></i> <span>Level</span></a>
+                                </li>
+                                <li>
+                                    <a href="{{route('showUsers')}}"><i class="fe fe-user-plus"></i> <span>User</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -219,6 +222,6 @@
 
         <!-- Custom JS -->
         <script  src="{{asset('admin/assets/js/script.js')}}"></script>
-
+            @yield('js_admin')
     </body>
 </html>

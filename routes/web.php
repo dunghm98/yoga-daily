@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 // posts
 Auth::routes();
+
+Route::get('/login/admin', 'Auth\LoginController@showAdminLoginForm');
+Route::post('/login/admin', 'Auth\LoginController@adminLogin')->name('admin_login');
+
 Route::get('/community','PostsController@index')->name('community');
 Route::get('/','HomeController@home')->name('home');
 Route::get('/course/{course}', 'HomeController@viewCourse')->name('viewCourse');
@@ -25,21 +29,22 @@ Route::get('/level/{level}', 'HomeController@viewLevel')->name('level.courses');
 Route::get('/pricing', function (){
     return view('courses.pricing-table');
 })->name('pricing');
-Route::get('/plan', function (){
-    return view('courses.subscribe-working');
+Route::get('/upgrade-to-premium', function (){
+    return view('courses.upgrade-premium');
 });
 
 
 // admin
-Route::get('/admin/dashboard', function (){
-    return view('admin.dashboard');
-});
+Route::get('/admin/dashboard', 'AdminController@showDashBoard')->name('showDashBoard');
 
 // add to favorite
 Route::post('/add-to-favorite/', 'CourseController@addToFavorite')->name('addToFavorite');
 Route::get('/favorite', 'CourseController@showFavorite')->name('showFavorite');
 
-
+Route::group(['middleware'=>'auth',],function(){
+    Route::get('/comments','CommentController@showComment');
+    //các route khác
+});
 // add
 Route::get('/admin/collection', 'AdminController@createCollection')->name('createCollection');
 Route::get('/admin/course', 'AdminController@createCourse')->name('createCourse');;
@@ -52,6 +57,10 @@ Route::get('/admin/collections', 'AdminController@showCollection')->name('showCo
 Route::get('/admin/courses', 'AdminController@showCourse')->name('showCourses');
 Route::get('/admin/lessons', 'AdminController@showLesson')->name('showLessons');
 Route::get('/admin/levels', 'AdminController@showLevel')->name('showLevels');
+Route::get('/admin/users', 'AdminController@showUser')->name('showUsers');
+
+Route::post('/admin/change_status_user', 'AdminController@setPremiumUser')->name('setPremiumUser');
+
 
 //edit
 Route::get('/admin/collections/{collection}', 'AdminController@editCollection')->name('editCollection');
