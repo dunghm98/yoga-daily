@@ -6,6 +6,8 @@ use App\Collection;
 use App\Course;
 use App\Lecture;
 use App\Level;
+use App\Posture;
+use App\Therapy;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -38,6 +40,16 @@ class AdminController extends Controller
         $collection = \App\Collection::create($data);
         return redirect(route('showCollections'));
     }
+    public function storeTherapy(Request $request)
+    {
+        $data = $request->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $therapy = \App\Therapy::create($data);
+        return redirect(route('showTherapies'));
+    }
     public function storeLevel(Request $request)
     {
         $data = $request->validate([
@@ -64,6 +76,22 @@ class AdminController extends Controller
         return redirect(route('showCourses'));
     }
 
+    public function storePosture(Request $request)
+    {
+        $posture = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'effective' => 'required',
+            'video' => 'required',
+            'note' => 'required',
+        ]);
+        $posture = \App\Posture::create($posture);
+        if($request->therapy){
+            $posture->setTherapy($request->therapy);
+        }
+        return redirect(route('showPostures'));
+    }
+
     public function storeLesson(Request $request)
     {
         $lesson = $request->validate([
@@ -82,6 +110,18 @@ class AdminController extends Controller
     {
         return view('admin.course.collection');
     }
+
+    public function createTherapy()
+    {
+        return view('admin.course.therapy');
+    }
+
+    public function createPosture()
+    {
+        $therapies = \App\Therapy::all();
+        return view('admin.course.posture', compact('therapies'));
+    }
+
     public function createLevel()
     {
         return view('admin.course.level');
@@ -107,6 +147,11 @@ class AdminController extends Controller
         $collections =  \App\Collection::all();
         return view('admin.list.collection', compact('collections'));
     }
+    public function showTherapy()
+    {
+        $therapies =  \App\Therapy::all();
+        return view('admin.list.therapy', compact('therapies'));
+    }
     public function showUser()
     {
         $users =  \App\User::all();
@@ -118,7 +163,11 @@ class AdminController extends Controller
         $courses = \App\Course::all();
         return view('admin.list.course', compact('courses'));
     }
-
+    public function showPosture()
+    {
+        $postures = \App\Posture::all();
+        return view('admin.list.posture', compact('postures'));
+    }
     public function showLesson()
     {
         $lessons = \App\Lecture::all();
@@ -133,6 +182,10 @@ class AdminController extends Controller
     public function editCollection( Collection $collection)
     {
         return view('admin.edit.collection', compact('collection'));
+    }
+    public function editTherapy( Therapy $therapy)
+    {
+        return view('admin.edit.therapy', compact('therapy'));
     }
     public function editLevel( Level $level)
     {
@@ -151,6 +204,18 @@ class AdminController extends Controller
         $collection->save();
         return redirect(route('showCollections'));
     }
+    public function saveTherapy(Request $request)
+    {
+        $data = $request->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        $therapy = \App\Therapy::find($request->id);
+        $therapy->title = $data['title'];
+        $therapy->description = $data['description'];
+        $therapy->save();
+        return redirect(route('showTherapies'));
+    }
     public function saveLevel(Request $request)
     {
         $data = $request->validate([
@@ -168,6 +233,12 @@ class AdminController extends Controller
         $collections = \App\Collection::all();
         $levels = \App\Level::all();
         return view('admin.edit.course', compact('course', 'levels', 'collections'));
+    }
+
+    public function editPosture( Posture $posture)
+    {
+        $therapies = \App\Therapy::all();
+        return view('admin.edit.posture', compact('posture','therapies' ));
     }
 
 
@@ -195,6 +266,30 @@ class AdminController extends Controller
             $course->setCollection($request->collection);
         }
         return redirect(route('showCourses'));
+    }
+
+    public function savePosture (Request $request)
+    {
+        /** @var Posture $posture */
+        $data = $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'effective' => 'required',
+            'video' => 'required',
+            'note' => 'required',
+        ]);
+//        dd($data);
+        $posture = \App\Posture::find($request->id);
+        $posture->title = $data['title'];
+        $posture->description = $data['description'];
+        $posture->effective = $data['effective'];
+        $posture->video = $data['video'];
+        $posture->note = $data['note'];
+        $posture->save();
+        if($request->therapy){
+            $posture->setTherapy($request->therapy);
+        }
+        return redirect(route('showPostures'));
     }
 
     public function editLesson(Lecture $lesson)
@@ -230,6 +325,11 @@ class AdminController extends Controller
     {
         $collection = \App\Collection::destroy($collection->id);
         return redirect(route('showCollections'));
+    }
+    public function deleteTherapy(Therapy $therapy)
+    {
+        $therapy = \App\Therapy::destroy($therapy->id);
+        return redirect(route('showTherapies'));
     }
     public function deleteCourse(Course $course)
     {

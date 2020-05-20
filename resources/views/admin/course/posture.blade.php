@@ -20,18 +20,18 @@
                 </div>
             </div>
             <!-- /Page Header -->
-            <form action="" method="post">
+            <form action="{{route('course.storePosture')}}" method="post">
                 @csrf
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Khóa học</h4>
+                            <h4 class="card-title">Tư thế</h4>
                         </div>
                         <div class="card-body">
                             <form action="#">
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Tiêu đề</label>
+                                    <label class="col-form-label col-md-2">Tên tư thế</label>
                                     <div class="col-md-10">
                                         <input name="title" value="{{ old('title') }}" type="text" class="form-control">
                                         @error('title')
@@ -40,15 +40,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Lộ trình</label>
+                                    <label class="col-form-label col-md-2">Trị liệu</label>
                                     <div class="col-md-10">
-                                        <select id="collection" name="collection[]" multiple class="form-control col-md-5 select select2-selection--multiple" multiplestyle="margin-left: 2% !important;">
+                                        <select id="therapy" name="therapy[]" multiple class="form-control col-md-5 select select2-selection--multiple" multiplestyle="margin-left: 2% !important;">
                                             <option value="">Lựa chọn...</option>
-                                            @foreach($collections as $collection)
-                                                <option value="{{$collection->id}}">{{ $collection->title }}</option>
+                                            @foreach($therapies as $therapy)
+                                                <option value="{{$therapy->id}}">{{ $therapy->title }}</option>
                                             @endforeach
                                         </select>
-                                        @error('collection')
+                                        @error('therapy')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
                                     </div>
@@ -56,54 +56,35 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Mô tả</label>
                                     <div class="col-md-10">
-                                        <textarea name="overview" rows="5" cols="5" class="form-control" placeholder="Enter text here">{{ old('overview') }}</textarea>
-                                        @error('overview')
+                                        <textarea name="description" rows="5" cols="5" class="form-control" placeholder="Enter text here">{{ old('description') }}</textarea>
+                                        @error('description')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Thời lượng khóa học</label>
-                                    <div class="col-md-3">
-                                        <input name="duration" value="{{old('duration')}}" type="text" class="form-control">
-                                        @error('duration')
-                                        <small class="text-danger">{{ $message }}</small>
-                                        @enderror
-                                    </div>
-                                    <label class="col-form-label col-md-2">Level</label>
-                                    <select name="level_id" class="form-control col-md-3 select ">
-                                        <option value="">Lựa chọn...</option>
-                                        @foreach($levels as $level)
-                                            <option value="{{ $level->id }}">{{ $level->name }}</option>
-                                            @endforeach
-                                    </select>
-                                    @error('level_id')
-                                    <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Loại khóa học</label>
-                                    <div  class="col-md-10">
-                                        <div id="number-of-hour col-md-8">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="free" name="is_premium" value="0" checked="" required="">
-                                                <label class="custom-control-label" for="free">Miễn phí</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" class="custom-control-input" id="premium" name="is_premium" value="1" required="">
-                                                <label class="custom-control-label" for="premium">Premium</label>
-                                            </div>
-                                        </div>
-                                        @error('is_premium')
-                                        <small class="text-danger">{{ $message }}</small>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Link video giới thiệu</label>
+                                    <label class="col-form-label col-md-2">Hiệu quả</label>
                                     <div class="col-md-10">
-                                        <input name="link_intro_video" value="{{ old('link_intro_video') }}" type="text" class="form-control">
-                                        @error('link_intro_video')
+                                        <textarea name="effective" rows="5" cols="5" class="form-control" placeholder="Enter text here">{{ old('effective') }}</textarea>
+                                        @error('effective')
+                                        <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Link video</label>
+                                    <div class="col-md-10">
+                                        <input name="video" value="{{ old('video') }}" type="text" class="form-control">
+                                        @error('video')
+                                        <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Chú ý</label>
+                                    <div class="col-md-10">
+                                        <textarea name="note" rows="5" cols="5" class="form-control" placeholder="Enter text here">{{ old('note') }}</textarea>
+                                        @error('note')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
                                     </div>

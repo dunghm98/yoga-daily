@@ -204,6 +204,12 @@
                                 <li class="{{ Request::path() == 'admin/users' ? 'active' : '' }}">
                                     <a href="{{route('showUsers')}}"><i class="fe fe-user-plus"></i> <span>User</span></a>
                                 </li>
+                                <li class="{{ Request::path() == 'admin/therapies' ? 'active' : '' }}">
+                                    <a href="{{route('showTherapies')}}"><i class="fe fe-user-plus"></i> <span>Trị liệu</span></a>
+                                </li>
+                                <li class="{{ Request::path() == 'admin/postures' ? 'active' : '' }}">
+                                    <a href="{{route('showPostures')}}"><i class="fe fe-user-plus"></i> <span>Tư thế</span></a>
+                                </li>
                             </ul>
                         </div>
                     </div>

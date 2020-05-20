@@ -48,7 +48,7 @@
                                 <div class="form-group row">
                                     <label for="collection" class="col-form-label col-md-2">Lộ trình</label>
                                     <div class="col-md-10">
-                                        <select id="collection" name="collection[]" class="form-control col-md-5 select select2-selection--multiple" multiplestyle="margin-left: 2% !important;">
+                                        <select id="collection" name="collection[]" multiple class="form-control col-md-5 select select2-selection-multiple" multiplestyle="margin-left: 2% !important;">
                                             <option value="">Lựa chọn...</option>
                                                 @foreach($collections as $collection)
                                                     <option {{ in_array($collection->id, $checkId) ? 'selected' : '' }} value="{{ $collection->id }}">{{ $collection->title }}</option>
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-form-label col-md-2">Loại khóa học</label>
-                                    <div class="col-md-10"> 
+                                    <div class="col-md-10">
                                         <div id="number-of-hour col-md-8">
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" class="custom-control-input" id="free" name="is_premium" value="0" {{ $course->is_premium == 0 ? 'checked' : '' }} required="">
