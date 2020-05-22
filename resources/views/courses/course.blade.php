@@ -103,7 +103,7 @@
                                 <div class="row">
                                     <div class="col-sm-5">
                                         <figure>
-                                            <a href="https://www.youtube.com/watch?v=IZRg2y2ZSsU" class="video">
+                                            <a href="{{ $lesson->link }}" class="video">
                                                 <i class="arrow_triangle-right_alt2"></i>
                                                 <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
                                             </a>
@@ -111,7 +111,7 @@
                                         </figure>
                                     </div>
                                     <div class="col-sm-7">
-                                        <h4><a href="https://www.youtube.com/watch?v=IZRg2y2ZSsU" class="video">{{$lesson->title}}</a></h4>
+                                        <h4><a href="{{ $lesson->link }}" class="video">{{$lesson->title}}</a></h4>
                                         <p>{{$lesson->description}}</p>
                                     </div>
                                 </div>
