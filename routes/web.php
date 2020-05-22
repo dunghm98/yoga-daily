@@ -143,6 +143,10 @@ Route::post('/fetch','CommentController@fetch');
 Route::post('/notification','NotificationsController@show');
 //search
 Route::post('/search','SearchController@searchUser');
+Route::get('/search','SearchController@searchUser');
+
+
+
 // follow
 Route::post('follow/{user}','FollowsController@store');
 //like
