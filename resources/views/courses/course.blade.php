@@ -6,7 +6,7 @@
 
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/43876352.jpg')}} data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/hinh-anh-yoga-dep-y-nghia-8.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
             <h1>{{$course->title}}</h1>
             <p>"{{ $course->overview }}"</p>
