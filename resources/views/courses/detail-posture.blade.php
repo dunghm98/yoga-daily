@@ -9,7 +9,7 @@
     <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/43876352.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
             <h1>{{$posture->title}}</h1>
-            <p>"{{ $posture->description }}"</p>
+
         </div>
     </section>
     <!-- End section -->
@@ -19,17 +19,25 @@
         <div class="row">
             <div class="col-md-8 ">
                 <iframe width="560" height="315" src="{{ $posture->getEmbedVideo() }}" allowfullscreen></iframe>
+                <h2>Chú ý</h2>
+                <p>"{{ $posture->note }}"</p>
+
+                <!-- End row -->
+                <hr class="add_bottom_30">
+                <div class="workoutlist">
+                    <h3>Mô tả</h3>
+                    <p>"{{ $posture->description }}"</p>
+                </div>
             </div>
             <!-- End col -->
             <div class="col-md-4" id="sidebar">
                 <div class="theiaStickySidebar">
                     <div class="box_style_2">
-                        <div id="features">
-                            <h4>Hiệu quả</h4>
+                        <div >
+                            <h2>Hiệu quả</h2>
                             <p>{{$posture->effective}}</p>
                         </div>
-                        <p><small style="line-height:10px">Chú ý: {{$posture->note}}</small>
-                        </p>
+
                         <hr>
 
                     </div>
