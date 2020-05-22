@@ -39,7 +39,7 @@
         <div id="hero_video">
             <div id="sub_content">
                 <div class="mobile_fix" style="text-shadow: black 0.1em 0.1em 0.2em;">
-                    <h1>Yoga trực tuyến - khỏe đẹp ngay tại nhà</h1>
+                    <h1>Yoga trực tuyến - khỏe đẹp mỗi ngày</h1>
                     <p style="font-size: 30px">
                         Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai.
                     </p>
