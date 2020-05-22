@@ -2454,10 +2454,10 @@ ul.list_3 li:before {
 	padding: 45px 15% 0 15%;
 	vertical-align: middle;
 	text-align: center;
-	/* background: rgba(0, 0, 0, 0.3); */
-	background-image: url(../img/yoga-chua-thoai-hoa-co.jpg);
+	background: rgba(0, 0, 0, 0.3);
+	/* background-image: url(../img/yoga-chua-thoai-hoa-co.jpg);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: cover; */
 }
 
 #sub_content_in h1 {
