@@ -43,22 +43,46 @@ class HomeController extends Controller
 
     public function exploreCourse()
     {
-        $courses = \App\Course::all();
+        if(isset(\request()->search)){
+            $title = \request()->search;
+            $courses = Course::where('title','like','%'.$title.'%')
+                ->orWhere('title','like','%'.$title.'%')->get();
+        } else {
+            $courses = \App\Course::all();
+        }
         return view('courses.explore', compact('courses'));
     }
     public function viewAllPosture()
     {
-        $postures = \App\Posture::all();
+        if(isset(\request()->search)){
+            $title = \request()->search;
+            $postures = Posture::where('title','like','%'.$title.'%')
+                ->orWhere('title','like','%'.$title.'%')->get();
+        } else {
+            $postures = \App\Posture::all();
+        }
         return view('courses.all-posture', compact('postures'));
     }
     public function viewTherapy()
     {
-        $therapies = \App\Therapy::all();
+        if(isset(\request()->search)){
+            $title = \request()->search;
+            $therapies = Therapy::where('title','like','%'.$title.'%')
+                ->orWhere('title','like','%'.$title.'%')->get();
+        } else {
+            $therapies = \App\Therapy::all();
+        }
         return view('courses.therapy', compact('therapies'));
     }
     public function viewProgram()
     {
-        $programs = \App\Program::all();
+        if(isset(\request()->search)){
+            $title = \request()->search;
+            $programs = Program::where('title','like','%'.$title.'%')
+                ->orWhere('title','like','%'.$title.'%')->get();
+        } else {
+            $programs = \App\Program::all();
+        }
         return view('courses.program', compact('programs'));
     }
 
