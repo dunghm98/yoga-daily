@@ -48,6 +48,20 @@
                                         @enderror
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-md-2">Chọn tư thế</label>
+                                    <div class="col-md-10">
+                                        <select id="posture" name="posture[]" multiple class="form-control col-md-5 select select2-selection--multiple" multiplestyle="margin-left: 2% !important;">
+                                            <option value="">Lựa chọn...</option>
+                                            @foreach($postures as $posture)
+                                                <option value="{{$posture->id}}">{{ $posture->title }}</option>
+                                            @endforeach
+                                        </select>
+                                        @error('posture')
+                                        <small class="text-danger">{{ $message }}</small>
+                                        @enderror
+                                    </div>
+                                </div>
                                 <div class="form-group row" style="margin-left: 0% !important;">
                                     <button type="submit" class="btn btn-primary">Lưu</button>
                                 </div>

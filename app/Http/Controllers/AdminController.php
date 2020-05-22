@@ -48,6 +48,9 @@ class AdminController extends Controller
         ]);
 
         $therapy = \App\Therapy::create($data);
+        if($request->posture){
+            $therapy->setPosture($request->posture);
+        }
         return redirect(route('showTherapies'));
     }
     public function storeLevel(Request $request)
@@ -113,7 +116,8 @@ class AdminController extends Controller
 
     public function createTherapy()
     {
-        return view('admin.course.therapy');
+        $postures = \App\Posture::all();
+        return view('admin.course.therapy', compact('postures'));
     }
 
     public function createPosture()
@@ -185,7 +189,8 @@ class AdminController extends Controller
     }
     public function editTherapy( Therapy $therapy)
     {
-        return view('admin.edit.therapy', compact('therapy'));
+        $postures = Posture::all();
+        return view('admin.edit.therapy', compact('therapy','postures'));
     }
     public function editLevel( Level $level)
     {
@@ -214,6 +219,9 @@ class AdminController extends Controller
         $therapy->title = $data['title'];
         $therapy->description = $data['description'];
         $therapy->save();
+        if($request->posture){
+            $therapy->setPosture($request->posture);
+        }
         return redirect(route('showTherapies'));
     }
     public function saveLevel(Request $request)

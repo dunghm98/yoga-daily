@@ -15,4 +15,9 @@ class Therapy extends Model
     {
         return $this->belongsToMany(Posture::class,'therapy_posture');
     }
+
+    public function setPosture(array $ids = [])
+    {
+        $this->postures()->sync($ids);
+    }
 }

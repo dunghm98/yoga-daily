@@ -48,6 +48,23 @@
                                         @enderror
                                     </div>
                                 </div>
+                            <div class="d-none">
+                                {{$checkId[] = '' }}
+                                @foreach($therapy->postures as $posture_therapy)
+                                    {{$checkId[] = $posture_therapy->id}}
+                                @endforeach
+                            </div>
+                            <div class="form-group row">
+                                <label for="collection" class="col-form-label col-md-2">Chọn tư thế</label>
+                                <div class="col-md-10">
+                                    <select id="posture" name="posture[]" multiple class="form-control col-md-5 select select2-selection-multiple" multiplestyle="margin-left: 2% !important;">
+                                        <option value="">Lựa chọn...</option>
+                                        @foreach($postures as $posture)
+                                            <option {{ in_array($posture->id, $checkId) ? 'selected' : '' }} value="{{ $posture->id }}">{{ $posture->title }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                                 <div class="form-group row" style="margin-left: 0% !important;">
                                     <button type="submit" class="btn btn-primary">Lưu</button>
                                 </div>
