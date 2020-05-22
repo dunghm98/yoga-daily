@@ -3,7 +3,7 @@
     <div class="container">
     <div class="row  offset-md-2"  style="height: 622px">
         <div class="col-sm-8 p-0 ">
-            <img src="/uploads/{{$post->image}}" alt="" class="w-100">
+            <img src="/uploads/{{$post->image}}" alt="" class="w-100" style="height: 616px">
         </div>
         <div class="p-0 border_ col-sm-4  h-100 " style="background: #fff;position: relative">
             <div class="name d-flex p-3 align-items-center border_b">

@@ -109,7 +109,7 @@
                                     @endforeach
                                 </ul>
                             </li>
-                            <li><a href="#0">Danh mục khóa học<i class="icon-down-open-mini"></i></a>
+                            <li><a href="#0">Cấp độ khóa học<i class="icon-down-open-mini"></i></a>
                                 <ul>
                                     @foreach(\App\Level::all() as $level)
                                         <li>
