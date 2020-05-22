@@ -93,6 +93,8 @@
                         <ul>
                             <li><a href="{{ route('home') }}">Trang chủ</a>
                             </li>
+                            <li><a href="{{ route('viewAllPosture') }}">Các tư thế trong yoga</a>
+                            </li>
                             <li><a href="{{ route('program') }}">Chương trình luyện tập</a>
                             </li>
                             <li><a href="{{ route('therapy') }}">Yoga trị liệu</a>

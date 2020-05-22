@@ -6,6 +6,7 @@ use App\Collection;
 use App\Course;
 use App\Level;
 use App\Posture;
+use App\Program;
 use App\Therapy;
 use Illuminate\Http\Request;
 
@@ -45,15 +46,29 @@ class HomeController extends Controller
         $courses = \App\Course::all();
         return view('courses.explore', compact('courses'));
     }
+    public function viewAllPosture()
+    {
+        $postures = \App\Posture::all();
+        return view('courses.all-posture', compact('postures'));
+    }
     public function viewTherapy()
     {
         $therapies = \App\Therapy::all();
         return view('courses.therapy', compact('therapies'));
     }
+    public function viewProgram()
+    {
+        $programs = \App\Program::all();
+        return view('courses.program', compact('programs'));
+    }
 
     public function viewDetailTherapy(Therapy $therapy)
     {
         return view('courses.detail-therapy', compact('therapy'));
+    }
+    public function viewDetailProgram(Program $program)
+    {
+        return view('courses.detail-program', compact('program'));
     }
 
 

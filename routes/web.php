@@ -26,8 +26,10 @@ Route::get('/explore', 'HomeController@exploreCourse')->name('exploreCourse');
 Route::get('/collections/{collection}', 'HomeController@viewCollection')->name('collection.courses');
 Route::get('/level/{level}', 'HomeController@viewLevel')->name('level.courses');
 Route::get('/therapy', 'HomeController@viewTherapy')->name('therapy');
+Route::get('/all-posture', 'HomeController@viewAllPosture')->name('viewAllPosture');
 Route::get('/program', 'HomeController@viewProgram')->name('program');
 Route::get('/therapy/{therapy}', 'HomeController@viewDetailTherapy')->name('viewDetailTherapy');
+Route::get('/program/{program}', 'HomeController@viewDetailProgram')->name('viewDetailProgram');
 Route::get('/posture/{posture}', 'HomeController@viewDetailPosture')->name('viewDetailPosture');
 
 
