@@ -6,7 +6,7 @@
 
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ $posture->getThumbnail() }}" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/43876352.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
             <h1>{{$posture->title}}</h1>
             <p>"{{ $posture->description }}"</p>

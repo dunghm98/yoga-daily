@@ -41,7 +41,7 @@
                     <!-- Logo -->
                     <div class="header-left">
                         <a href="{{route('showDashBoard')}}" class="logo">
-                            <img src="assets/img/beer.png" alt="Logo">
+                            <img src="{{ asset('img/beer.png') }}" alt="Logo">
                         </a>
                         <a href="{{route('showDashBoard')}}" class="logo logo-small">
                             <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">

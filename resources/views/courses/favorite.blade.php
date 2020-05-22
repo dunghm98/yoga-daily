@@ -3,7 +3,7 @@
 @section('content')
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/beach-yoga.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
             <h1>Favorite Course</h1>
         </div>

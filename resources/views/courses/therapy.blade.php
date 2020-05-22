@@ -3,10 +3,10 @@
 @section('content')
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/43876352.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>Yoga Daily Workout Videos</h1>
-            <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+        <h1>Phép trị liệu bằng Yoga </h1><br><br>
+            <i style="color: white">"Hệ thống trị liệu của Yoga dựa trên nguyên tắc để cơ  thể có thể thực  hiện các chức năng của  mình sao cho càng phù hợp với tự nhiên càng tốt. Thực hành bằng asana được hướng dẫn trước tiên sẽ làm tuoi trẻ cơ thể của bạn và sau đó là tấn công vào nguồn gốc của căn bệnh."</i>
         </div>
     </section>
     <!-- End section -->

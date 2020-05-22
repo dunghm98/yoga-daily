@@ -4,7 +4,7 @@
             <div class="row ">
                 <div class="col-md-3 col-sm-12">
                     <p>
-                        <img src="img/beer.png" width="95" height="27" alt="Lovefit" data-retina="true">
+                        <img src="{{ asset('img/beer.png') }}" width="95" height="27" alt="Lovefit" data-retina="true">
                     </p>
                     <div id="social">
                         <ul>
@@ -50,7 +50,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3 hidden-sm hidden-xs">
-                    <img src="img/footer_img.png" width="257" height="302" alt="Image" class="footer_pic">
+                    <img src="{{ asset('img/footer_img.png') }}" width="257" height="302" alt="Image" class="footer_pic">
                 </div>
             </div>
             <!-- End row -->

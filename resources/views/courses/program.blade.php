@@ -3,10 +3,10 @@
 @section('content')
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/4-0-0-0-0-1525764424.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>Yoga Daily Workout Videos</h1>
-            <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+            <h1>Chương trình luyện tập  Yoga của IYENGAR</h1><br><br>
+            <i style="color: white">"Chương trình luyện tập  này đưa bạn đi từ các asana đơn gian đến phức tạp. Hãy tuân theo trình tự đã được chỉ định cho mỗi tuần lễ, như vậy việc luyện tập của bạn sẽ có hiệu quả hơn và đồng thời cũng giảm đến mức thấp  nhất khả năng chấn thương hay bị căng thẳng cho cơ thể."</i>
         </div>
     </section>
     <!-- End section -->

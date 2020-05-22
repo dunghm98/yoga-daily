@@ -93,7 +93,7 @@
                         <ul>
                             <li><a href="{{ route('home') }}">Trang chủ</a>
                             </li>
-                            <li><a href="{{ route('viewAllPosture') }}">Các tư thế trong yoga</a>
+                            <li><a href="{{ route('viewAllPosture') }}">Tư thế Yoga</a>
                             </li>
                             <li><a href="{{ route('program') }}">Chương trình luyện tập</a>
                             </li>
@@ -118,7 +118,7 @@
                                     @endforeach
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/community') }}">Join Yoga Community</a>
+                            <li><a href="{{ url('/community') }}">Cộng đồng</a>
                             </li>
                             @if (Auth::check())
 {{--                                <li><a href="#" data-toggle="modal" data-target="#login" class="visible-xs">Login</a>--}}

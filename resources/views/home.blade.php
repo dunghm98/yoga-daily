@@ -93,7 +93,7 @@
         <div class="container margin_60_35">
             <h2 class="main_title"><em></em> Những Video Mới Nhất<span>Yoga và cuộc sống</span></h2>
             <div id="filter_buttons">
-                <button data-toggle="portfilter" class="active" data-target="all">All</button>
+                <button data-toggle="portfilter" class="active" data-target="all">Tất cả</button>
                 @foreach($levels as $level)
                     <button data-toggle="portfilter" data-target="{{$level->name}}">{{$level->name}}</button>
                 @endforeach
@@ -155,7 +155,7 @@
     <section class="promo_full">
         <div class="promo_full_wp">
             <div>
-                <h3>Khách hàng nói về chúng tôi<span>Id tale utinam ius, an mei omnium recusabo iracundia.</span></h3>
+                <h3>Khách hàng nói về chúng tôi<span>Thật tuyệt vời khi biết đến Yoga</span></h3>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9 col-md-offset-1">

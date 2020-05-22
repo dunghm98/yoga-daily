@@ -6,7 +6,7 @@
 
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{ $course->getThumbnail() }}" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/43876352.jpg')}} data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
             <h1>{{$course->title}}</h1>
             <p>"{{ $course->overview }}"</p>
@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="box_style_3">
-                            <img src="img/top_body.png" width="69" height="200" alt="Image">
+                            <img src="{{asset('img/top_body.png')}}" width="69" height="200" alt="Image">
                             <h4>Body Focus</h4>
                         </div>
                     </div>

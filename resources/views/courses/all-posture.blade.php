@@ -3,9 +3,10 @@
 @section('content')
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="{{asset('img/yoga-chua-thoai-hoa-co.jpg')}}" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>"Các tư thế yoga"</h1>
+            <h1>"Các tư thế yoga"</h1><br><br>
+            <i style="color: white">"Thể xác là ngôi đền của bạn. Hãy giữ nó trong sạch và tinh khiết."</i>
         </div>
     </section>
     <!-- End section -->
