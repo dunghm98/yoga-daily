@@ -15,6 +15,13 @@ class Posture extends Model
     {
         return $this->belongsToMany(Therapy::class,'therapy_posture');
     }
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function programs()
+    {
+        return $this->belongsToMany(Program::class,'program_posture');
+    }
     public function setTherapy(array $ids = [])
     {
         $this->therapies()->sync($ids);

@@ -7,6 +7,7 @@ use App\Course;
 use App\Lecture;
 use App\Level;
 use App\Posture;
+use App\Program;
 use App\Therapy;
 use App\User;
 use Illuminate\Http\Request;
@@ -52,6 +53,18 @@ class AdminController extends Controller
             $therapy->setPosture($request->posture);
         }
         return redirect(route('showTherapies'));
+    }
+    public function storeProgram(Request $request)
+    {
+        $data = $request->validate([
+            'title' => 'required'
+        ]);
+
+        $program = \App\Program::create($data);
+        if($request->posture){
+            $program->setPosture($request->posture);
+        }
+        return redirect(route('showPrograms'));
     }
     public function storeLevel(Request $request)
     {
@@ -119,6 +132,11 @@ class AdminController extends Controller
         $postures = \App\Posture::all();
         return view('admin.course.therapy', compact('postures'));
     }
+    public function createProgram()
+    {
+        $postures = \App\Posture::all();
+        return view('admin.course.program', compact('postures'));
+    }
 
     public function createPosture()
     {
@@ -156,6 +174,12 @@ class AdminController extends Controller
         $therapies =  \App\Therapy::all();
         return view('admin.list.therapy', compact('therapies'));
     }
+    public function showPrograms()
+    {
+        $programs =  \App\Program::all();
+        return view('admin.list.program', compact('programs'));
+    }
+
     public function showUser()
     {
         $users =  \App\User::all();
@@ -192,6 +216,11 @@ class AdminController extends Controller
         $postures = Posture::all();
         return view('admin.edit.therapy', compact('therapy','postures'));
     }
+    public function editProgram( Program $program)
+    {
+        $postures = Posture::all();
+        return view('admin.edit.program', compact('program','postures'));
+    }
     public function editLevel( Level $level)
     {
         return view('admin.edit.level', compact('level'));
@@ -223,6 +252,20 @@ class AdminController extends Controller
             $therapy->setPosture($request->posture);
         }
         return redirect(route('showTherapies'));
+    }
+
+    public function saveProgram(Request $request)
+    {
+        $data = $request->validate([
+            'title' => 'required'
+        ]);
+        $program = \App\Program::find($request->id);
+        $program->title = $data['title'];
+        $program->save();
+        if($request->posture){
+            $program->setPosture($request->posture);
+        }
+        return redirect(route('showPrograms'));
     }
     public function saveLevel(Request $request)
     {
@@ -338,6 +381,16 @@ class AdminController extends Controller
     {
         $therapy = \App\Therapy::destroy($therapy->id);
         return redirect(route('showTherapies'));
+    }
+    public function deletePosture(Posture $posture)
+    {
+        $posture = \App\Posture::destroy($posture->id);
+        return redirect(route('showPostures'));
+    }
+    public function deleteProgram(Program $program)
+    {
+        $program = \App\Program::destroy($program->id);
+        return redirect(route('showPrograms'));
     }
     public function deleteCourse(Course $course)
     {

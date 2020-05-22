@@ -52,6 +52,8 @@ Route::get('/admin/lesson', 'AdminController@createLesson')->name('createLesson'
 Route::get('/admin/level', 'AdminController@createLevel')->name('createLevel');;
 Route::get('/admin/therapy', 'AdminController@createTherapy')->name('createTherapy');;
 Route::get('/admin/posture', 'AdminController@createPosture')->name('createPosture');;
+Route::get('/admin/program', 'AdminController@createProgram')->name('createProgram');;
+
 
 
 
@@ -63,6 +65,8 @@ Route::get('/admin/levels', 'AdminController@showLevel')->name('showLevels');
 Route::get('/admin/users', 'AdminController@showUser')->name('showUsers');
 Route::get('/admin/therapies', 'AdminController@showTherapy')->name('showTherapies');
 Route::get('/admin/postures', 'AdminController@showPosture')->name('showPostures');
+Route::get('/admin/programs', 'AdminController@showPrograms')->name('showPrograms');
+
 
 
 Route::post('/admin/change_status_user', 'AdminController@setPremiumUser')->name('setPremiumUser');
@@ -75,6 +79,8 @@ Route::get('/admin/lessons/{lesson}', 'AdminController@editLesson')->name('editL
 Route::get('/admin/levels/{level}', 'AdminController@editLevel')->name('editLevel');
 Route::get('/admin/therapies/{therapy}', 'AdminController@editTherapy')->name('editTherapy');
 Route::get('/admin/postures/{posture}', 'AdminController@editPosture')->name('editPosture');
+Route::get('/admin/programs/{program}', 'AdminController@editProgram')->name('editProgram');
+
 
 
 
@@ -86,6 +92,8 @@ Route::post('/admin/lesson', 'AdminController@storeLesson')->name('course.storeL
 Route::post('/admin/level', 'AdminController@storeLevel')->name('course.storeLevel');
 Route::post('/admin/therapy', 'AdminController@storeTherapy')->name('course.storeTherapy');
 Route::post('/admin/posture', 'AdminController@storePosture')->name('course.storePosture');
+Route::post('/admin/program', 'AdminController@storeProgram')->name('course.storeProgram');
+
 
 
 
@@ -96,6 +104,8 @@ Route::post('/admin/lesson/save', 'AdminController@saveLesson')->name('course.sa
 Route::post('/admin/level/save', 'AdminController@saveLevel')->name('course.saveLevel');
 Route::post('/admin/therapy/save', 'AdminController@saveTherapy')->name('course.saveTherapy');
 Route::post('/admin/posture/save', 'AdminController@savePosture')->name('course.savePosture');
+Route::post('/admin/program/save', 'AdminController@saveProgram')->name('course.saveProgram');
+
 
 
 //delete
@@ -105,6 +115,8 @@ Route::get('/admin/lesson/delete/{lecture}', 'AdminController@deleteLesson')->na
 Route::get('/admin/level/delete/{level}', 'AdminController@deleteLevel')->name('deleteLevel');
 Route::get('/admin/therapy/delete/{therapy}', 'AdminController@deleteTherapy')->name('deleteTherapy');
 Route::get('/admin/posture/delete/{posture}', 'AdminController@deletePosture')->name('deletePosture');
+Route::get('/admin/program/delete/{program}', 'AdminController@deleteProgram')->name('deleteProgram');
+
 
 
 
