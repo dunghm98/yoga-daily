@@ -93,6 +93,10 @@
                         <ul>
                             <li><a href="{{ route('home') }}">Trang chủ</a>
                             </li>
+                            <li><a href="{{ route('program') }}">Chương trình luyện tập</a>
+                            </li>
+                            <li><a href="{{ route('therapy') }}">Yoga trị liệu</a>
+                            </li>
                             <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu">Lộ trình yoga<i class="icon-down-open-mini"></i></a>
                                 <ul>

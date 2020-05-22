@@ -52,7 +52,7 @@
                                     <div class="row">
                                         <div class="col-sm-5">
                                             <figure>
-                                                <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
+                                                <a href="{{ $lesson->link }}" class="video">
                                                     <i class="arrow_triangle-right_alt2"></i>
                                                     <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
                                                 </a>
@@ -61,7 +61,7 @@
                                             </figure>
                                         </div>
                                         <div class="col-sm-7">
-                                            <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
+                                            <h4><a href="{{ $lesson->link }}" class="video">{{$lesson->title}}</a></h4>
                                             <p>{{$lesson->description}}</p>
                                         </div>
                                     </div>
@@ -77,7 +77,7 @@
                                 <div class="row">
                                     <div class="col-sm-5">
                                         <figure>
-                                            <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
+                                            <a href="{{ $lesson->link }}" class="video">
                                                 <i class="arrow_triangle-right_alt2"></i>
                                                 <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
                                             </a>
@@ -86,7 +86,7 @@
                                         </figure>
                                     </div>
                                     <div class="col-sm-7">
-                                        <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
+                                        <h4><a href="{{ $lesson->link }}" class="video">{{$lesson->title}}</a></h4>
                                         <p>{{$lesson->description}}</p>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                                 <div class="row">
                                     <div class="col-sm-5">
                                         <figure>
-                                            <a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">
+                                            <a href="{{ $lesson->link }}" class="video">
                                                 <i class="arrow_triangle-right_alt2"></i>
                                                 <img src="{{$lesson->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
                                             </a>
@@ -112,7 +112,7 @@
                                         </figure>
                                     </div>
                                     <div class="col-sm-7">
-                                        <h4><a href="https://www.youtube.com/watch?v=l6LpYqlBhAQ" class="video">{{$lesson->title}}</a></h4>
+                                        <h4><a href="{{ $lesson->link }}" class="video">{{$lesson->title}}</a></h4>
                                         <p>{{$lesson->description}}</p>
                                     </div>
                                 </div>
@@ -158,15 +158,20 @@
                                 <a href="/login" class="btn_full">Login tài khoản Premium</a>
                             @endif
                         @endif
-                        @forelse($course->users as $user)
-                            @if(auth()->user()->id == $user->id)
-                                <p class="btn_outline bg-danger"><i class=" icon-heart"></i> Khoá học yêu thích</p>
-                            @else
+                        @if(auth()->user())
+                            @forelse($course->users as $user)
+                                @if(auth()->user()->id == $user->id)
+                                    <p class="btn_outline bg-danger"><i class=" icon-heart"></i> Khoá học yêu thích</p>
+                                @else
+                                    <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
+                                @endif
+                            @empty
                                 <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
-                            @endif
-                        @empty
-                            <p class="btn_outline" data-course = "{{$course->id}}" id="add-to-favorite"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</p>
-                        @endforelse
+                            @endforelse
+                        @else
+                            <a href="/login" class="btn_outline"><i class=" icon-heart"></i> Thêm vào danh sách yêu thích</a>
+                        @endif
+
                     </div>
                     <!-- End box_style -->
                 </div>

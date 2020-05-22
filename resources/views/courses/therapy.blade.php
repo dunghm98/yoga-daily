@@ -75,18 +75,18 @@
 
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach($courses as $course)
+                        @foreach($therapies as $therapy)
                             <div class="col-sm-4 col-md-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="course_container">
-                                    <div class="ribbon top"><span>{{ $course->is_premium == 1 ? 'Premium' : 'Free' }}</span></div>
+{{--                                    <div class="ribbon top"><span>{{ $therapy->is_premium == 1 ? 'Premium' : 'Free' }}</span></div>--}}
                                     <figure>
-                                        <a href="{{route('viewCourse', $course)}}">
-                                            <img src="{{$course->getThumbnail()}}" width="800" height="533" class="img-responsive" alt="Image">
-                                            <div class="short_info"><i class="icon-clock-1"></i>{{$course->duration}}</div>
-                                        </a>
+{{--                                        <a href="{{route('viewCourse', $therapy)}}">--}}
+{{--                                            <img src="{{$course->getThumbnail()}}" width="800" height="533" class="img-responsive" alt="Image">--}}
+{{--                                            <div class="short_info"><i class="icon-clock-1"></i>{{$course->duration}}</div>--}}
+{{--                                        </a>--}}
                                     </figure>
-                                    <div class="course_title"><div class="type"><span>{{$course->level->name}}</span></div>
-                                        <h3><a href="{{route('viewCourse', $course)}}">{{$course->title}}</a></h3>
+                                    <div class="course_title">
+                                        <h3><a href="{{route('viewDetailTherapy', $therapy)}}">{{$therapy->title}}</a></h3>
                                         <div class="info_2 clearfix"></div>
                                     </div>
                                 </div>

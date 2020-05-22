@@ -25,6 +25,13 @@ Route::get('/course/{course}', 'HomeController@viewCourse')->name('viewCourse');
 Route::get('/explore', 'HomeController@exploreCourse')->name('exploreCourse');
 Route::get('/collections/{collection}', 'HomeController@viewCollection')->name('collection.courses');
 Route::get('/level/{level}', 'HomeController@viewLevel')->name('level.courses');
+Route::get('/therapy', 'HomeController@viewTherapy')->name('therapy');
+Route::get('/program', 'HomeController@viewProgram')->name('program');
+Route::get('/therapy/{therapy}', 'HomeController@viewDetailTherapy')->name('viewDetailTherapy');
+Route::get('/posture/{posture}', 'HomeController@viewDetailPosture')->name('viewDetailPosture');
+
+
+
 
 Route::get('/pricing', function (){
     return view('courses.pricing-table');

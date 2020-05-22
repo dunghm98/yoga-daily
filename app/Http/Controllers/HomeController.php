@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Collection;
 use App\Course;
 use App\Level;
+use App\Posture;
+use App\Therapy;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -43,7 +45,22 @@ class HomeController extends Controller
         $courses = \App\Course::all();
         return view('courses.explore', compact('courses'));
     }
+    public function viewTherapy()
+    {
+        $therapies = \App\Therapy::all();
+        return view('courses.therapy', compact('therapies'));
+    }
 
+    public function viewDetailTherapy(Therapy $therapy)
+    {
+        return view('courses.detail-therapy', compact('therapy'));
+    }
+
+
+    public function viewDetailPosture(Posture $posture)
+    {
+        return view('courses.detail-posture', compact('posture'));
+    }
     public function viewCourse(Course $course)
     {
         return view('courses.course', compact('course'));

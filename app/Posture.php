@@ -26,4 +26,24 @@ class Posture extends Model
     {
         $this->therapies()->sync($ids);
     }
+    public function getThumbnail()
+    {
+        $url = $this->video;
+        $videoId = $this->getVideoId($url);
+        $image = 'https://img.youtube.com/vi/'.$videoId.'/maxresdefault.jpg';
+        return $image;
+    }
+
+    public function getVideoId($url)
+    {
+        preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $url, $matches);
+        return implode($matches);
+    }
+
+    public function getEmbedVideo()
+    {
+        $url = $this->video;
+        $videoId = $this->getVideoId($url);
+        return 'https://www.youtube.com/embed/'.$videoId;
+    }
 }

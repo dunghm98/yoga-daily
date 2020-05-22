@@ -5,8 +5,8 @@
     <!-- SubHeader =============================================== -->
     <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_general.jpg" data-natural-width="1400" data-natural-height="470">
         <div id="sub_content_in">
-            <h1>Yoga Daily Workout Videos</h1>
-            <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+            <h1>{{ $therapy->title }}</h1>
+            <p>"{{ $therapy->description }}"</p>
         </div>
     </section>
     <!-- End section -->
@@ -75,18 +75,18 @@
 
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach($courses as $course)
+                        @foreach($therapy->postures as $posture)
                             <div class="col-sm-4 col-md-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="course_container">
-                                    <div class="ribbon top"><span>{{ $course->is_premium == 1 ? 'Premium' : 'Free' }}</span></div>
                                     <figure>
-                                        <a href="{{route('viewCourse', $course)}}">
-                                            <img src="{{$course->getThumbnail()}}" width="800" height="533" class="img-responsive" alt="Image">
-                                            <div class="short_info"><i class="icon-clock-1"></i>{{$course->duration}}</div>
+                                        <a href="{{ $posture->video }}" class="video">
+                                            <i class="arrow_triangle-right_alt2"></i>
+                                            <img src="{{$posture->getThumbnail()}}" width="780" height="420"  alt="Image" class="img-responsive">
                                         </a>
+                                        <em></em>
                                     </figure>
-                                    <div class="course_title"><div class="type"><span>{{$course->level->name}}</span></div>
-                                        <h3><a href="{{route('viewCourse', $course)}}">{{$course->title}}</a></h3>
+                                    <div class="course_title">
+                                        <h3><a href="{{route('viewDetailPosture', $posture)}}">{{$posture->title}}</a></h3>
                                         <div class="info_2 clearfix"></div>
                                     </div>
                                 </div>
